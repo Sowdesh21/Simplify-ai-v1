@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMMARIZATION</title>
+    <link rel="stylesheet" href="/java.css">
+   
+</head>
+<body>  
+    <!-- Container for Sidebar and Content -->
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('javaDropdown')">INTRODUCTION OF JAVA</button>
+                    <ul id="javaDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('historyOfJava')">HISTORY OF JAVA</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('featuresJava')">FEATURES OF JAVA</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('installation')">INSTALLATION</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('path')">HOW TO SET PATH</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('jdk')">JDK, JRE, JVM</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('literals')">LITERALS</button></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('dataTypes')">DATATYPES</button>
+                    <ul id="dataTypes" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('primitive')">PRIMITIVE DATATYPES</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('nonPrimitive')">NON-PRIMITIVE DATATYPES</button></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('keywordsDropdown')">KEYWORDS</button>
+                    <ul id="keywordsDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('keywords')">TYPES OF KEYWORDS</button></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('variablesDropdown')">VARIABLES</button>
+                    <ul id="variablesDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('global')">GLOBAL VARIABLES</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('instance')">INSTANCE VARIABLE</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('static')">STATIC VARIABLES</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('local')">LOCAL VARIABLES</button></li>
+                      <li><button class="dropdown-btn" onclick="showContent('final')">FINAL VARIABLES</button></li> 
+                      <li><button class="dropdown-btn" onclick="showContent('parameter')">PARAMETER VARIABLES</button></li> 
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('operatorsDropdown')">OPERATORS</button>
+                    <ul id="operatorsDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('arithmetic')">ARITHMETIC OPERATORS</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('assignment')">ASSIGNMENT OPERATOR</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('relational')">RELATIONAL OPERATOR</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('unary')">UNARY OPERATOR</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('bitwise')">BITWISE OPERATOR</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('shift')">SHIFT OPERATOR</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('logical')">LOGICAL OPERATOR</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('ternary')">TERNARY OPERATOR</button></li> 
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('controlDropdown')">CONTROL STATEMENTS</button>
+                    <ul id="controlDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('decision')">DECISION MAKING STATEMENTS</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('loop')">LOOPING STATEMENTS</button></li>
+                        <li><button class="dropdown-btn" onclick="showContent('jump')">JUMP STATEMENTS</button></li> 
+                       
+                    </ul>
+                </li>
+
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('methodsDropdown')">METHODS</button>
+                    <ul id="methodsDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('method')">TYPES OF METHODS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('static')">STATIC METHOD</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('nonstatic')">NON-STATIC METHOD</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('overloading')">METHOD OVERLOADING</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('overriding')">METHOD OVERRIDING</button></li> 
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('arraysDropdown')">ARRAYS</button>
+                    <ul id="arraysDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('declaration')">TYPES OF DECLARATION ARRAYS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('importance')">IMPORTANCE OF ARRAYS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('rules')">RULES OF ARRAYS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('oneD')">ONE-D ARRAY</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('twoD')">TWO-D ARRAY</button></li> 
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('stringDropdown')">STRINGS</button>
+                    <ul id="stringDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('string')">WHAT IS STRING</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('importancestr')">IMPORTANCE OF STRINGS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('immutable')">IMMUTABLE STRING</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('methods')">METHODS OF STRINGS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('substring')">SUBSTRING</button></li> 
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="toggle-btn" onclick="toggleDropdown('exceptionDropdown')">EXCEPTIONS</button>
+                    <ul id="exceptionDropdown" class="dropdown">
+                        <li><button class="dropdown-btn" onclick="showContent('exception')">WHAT IS EXCEPTION</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('types')">TYPES OF EXCEPTIONS</button></li> 
+                        <li><button class="dropdown-btn" onclick="showContent('handling')">EXCEPTION HANDLING</button></li> 
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Content Display Area -->
+        <div class="maincontent">
+            <div class="ani">
+            <div id="maincontentArea">
+                
+                <h2>Select a topic to see content</h2></div>
+                <Button style="margin: 0 34rem;" onclick="bwd()">SUMMARIZER</Button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        
+        // Toggle dropdown visibility
+        function toggleDropdown(dropdownId) {
+        const dropdowns = document.querySelectorAll('.dropdown'); // Select all dropdowns
+        dropdowns.forEach((dropdown) => {
+            if (dropdown.id !== dropdownId) {
+                dropdown.style.display = 'none'; // Close other dropdowns
+            }
+        });
+
+        const dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+        // Show selected content
+        function showContent(topic) {
+            const contentArea = document.getElementById('maincontentArea');
+            let content = '';
+
+            switch (topic) {
+                case 'historyOfJava':
+                    content = '<h2>HISTORY OF JAVA</h2><p>Java was developed by Sun Microsystems in the mid-1990s, with the initial release in 1995. Created by James Gosling and his team,Initially called OAK,it was renamed Java in 1995 after a type of coffee</p> <p> Java quickly gained popularity due to its platform independence, object-oriented nature, and robustness. Over the years, Java evolved through various versions, with Java 2 (released in 1998) introducing the popular Standard, Enterprise, and Micro Editions.In 2010, Oracle Corporation acquired Sun Microsystems, taking over Javas development.</p> <p> Java has become a widely used programming language, particularly for web, mobile, and enterprise applications, with Android development relying heavily on Java. Java is a versatile language supporting both structured and object-oriented programming.</p> <p>Initially designed for embedded systems, it became a general-purpose language, known for its platform independence via the Java Virtual Machine (JVM). Structured programming in Java uses modular code with functions, while object-oriented programming focuses on classes and objects to model real-world entities and promote code reuse. Its adaptability makes Java widely used in web, mobile, and enterprise applications.</p>';
+                    break;
+                case 'featuresJava':
+                    content = '<h2>FEATURES OF JAVA</h2><p> Platform Independence: Java’s "write once, run anywhere" philosophy allows programs to run on any device with a Java Virtual Machine (JVM), regardless of the underlying hardware or operating system.</p> <p>Object-Oriented: Java follows the object-oriented programming model, focusing on objects and classes to model real-world entities. It supports key OOP concepts like inheritance, encapsulation, polymorphism, and abstraction.</p> <p>Secure: Java provides a secure runtime environment with features like bytecode verification, security managers, and garbage collection, making it ideal for network-based applications.</p><p>Robust: Java has strong memory management and exception handling, which helps prevent crashes or unexpected behavior. It includes automatic garbage collection to handle memory deallocation.</p> <p>Multithreaded: Java natively supports multithreading, allowing multiple tasks to run concurrently within a single program, improving performance, especially in large-scale applications.</p>';
+                    break;
+                case 'installation':
+                    content = '<h2>INSTALLATION</h2><p><p> For Windows:Download the JDK:Go to the Java SE Downloads page (choose the version you need).Accept the license agreement and download the installer for Windows.Run the Installer:Double-click the downloaded .exe file.Follow the installation prompts. You can choose the default settings or customize them.</p><p>For macOS:Download the JDK:Visit the Java SE Downloads page.Download the macOS installer (.dmg file).Run the Installer:Open the downloaded .dmg file and follow the installation instructions.</p><p>Install OpenJDK (recommended):Open a terminal and run the following command based on your distribution:Ubuntu/Debian: bash Copy code sudo apt update sudo apt install openjdk-11-jdk Fedora: bash Copy code sudo dnf install java-11-openjdk-devel CentOS/RHEL: bas Copy code sudo yum install java-11-openjdk-devel Verify Installation:Open the terminal and type java -version. You should see the installed Java version.</p>`,</p>';
+                    break;
+                case 'path':
+                    content = '<h2>How to Set Path</h2><p><p> Set Up Environment Variables:Right-click on "This PC" or "My Computer" and select "Properties."Click on "Advanced system settings."Click the "Environment Variables" button.Under "System variables," find the Path variable and click "Edit."Add the path to the JDK bin directory (e.g., C:\Program Files\Java\jdk-11\bin).Click OK to close all dialog boxes.Verify Installation:Open Command Prompt and type java -version. You should see the installed Java version.</p><p>Set Up Environment Variables (Optional):You might need to set up your JAVA_HOME variable. Open Terminal and add the following line to your ~/.bash_profile or ~/.zshrc file (adjust the version number as needed):bas Copy codeexport JAVA_HOME=$(/usr/libexec/java_home)Verify Installation:Open Terminal and type java -version. You should see the installed Java version.</p>`,</p>';
+                    break;
+                case 'jdk':
+                    content = '<h2>JDK, JRE, JVM</h2><p><p> JDK (Java Development Kit)Definition: The JDK is a software development kit that provides tools necessary for developing Java applications.Components: It includes the following:JRE: The Java Runtime Environment, which allows you to run Java applications.Development Tools: Compilers (like javac), debuggers, and other tools to write and test Java code.Usage: Developers use the JDK to create Java programs. It is essential for compiling and packaging Java applications.</p><p>JRE (Java Runtime Environment)Definition: The JRE is a part of the Java software that provides the environment to run Java applications.Components: It includes:JVM: The Java Virtual Machine, which executes Java bytecode.Libraries: A set of pre-built libraries and classes that Java applications use.Usage: Users who want to run Java applications on their machines need the JRE. It does not include development tools like compilers.</p><p>JVM (Java Virtual Machine)Definition: The JVM is an abstract computing machine that enables a computer to run Java programs.Functionality:It converts Java bytecode (produced by the Java compiler) into machine code that can be executed by the underlying operating system.It provides features like memory management (including garbage collection) and platform independence.Usage: Every Java application runs on a JVM, regardless of the hardware or operating system.</p><p>JIT (Just-In-Time) Compilation is a technique used by the Java Virtual Machine (JVM) to improve the performance of Java applications. It converts Java bytecode into native machine code at runtime. The JVM identifies frequently executed methods and compiles them, allowing for faster execution by the CPU. JIT also optimizes code based on usage patterns, making it effective for long-running applications. Overall, JIT enhances the efficiency and speed of Java programs.</p>`,</p>';
+                    break;
+                case 'literals':
+                    content = '<h2>LITRALS</h2><p>In Java, literals are fixed values that are represented directly in the source code. They can be of various data types, and they are used to represent constant values in programs. Here are the main types of literals in Java:</p> <p> Integer Literals: Represent whole numbers. They can be in decimal (base 10), hexadecimal (base 16), or binary (base 2) formats. </p> <p>Example: Decimal: 42 Hexadecimal: 0x2A Binary: 0b101010 </p> <p>Floating-Point Literals: Represent decimal numbers. They can be written in standard decimal notation or in scientific notation.</p> <p>Example: Standard: 3.14 Scientific: 2.5e3 (which means 2.5 × 1 0 3 2.5×10 3)</p> <p>Character Literals: Represent single characters enclosed in single quotes.</p> <p>Example: A, b, \n (newline character)</p> <p>String Literals: Represent a sequence of characters enclosed in double quotes.</p> <p>Example: "Hello, World!" </p> <p>Boolean Literals: Represent the two truth values in Java: true and false.</p> <p> Example: true, false </p> <p>Summary Literals are essential in Java for defining constant values directly in the code, facilitating easier understanding and readability.</p>';
+                    break;
+                case 'primitive':
+                    content = '<h2>PRIMITIVE DATATYPES</h2><p>A datatype is a classification that specifies the type of data that a variable can hold in programming or databases. It determines how the data is stored, what operations can be performed on it, and how it can be manipulated. Datatypes help ensure that operations are performed on compatible types of data.Java has eight primitive data types...</p><p>Category	Datatype	Size (Bits)	Description</p> <p>Primitive	byte	8	8-bit integer (range: -128 to 127)</p> <p>short	16	16-bit integer (range: -32,768 to 32,767)</p> <p>int	32	32-bit integer (range: -2^31 to 2^31-1)</p> <p>long	64	64-bit integer (range: -2^63 to 2^63-1)</p> <p>float	32	32-bit floating-point (single precision)</p> <p>double	64	64-bit floating-point (double precision)</p> <p>char	16	16-bit Unicode character</p> <p>boolean	1 (or more)	Represents true or false</p>';
+
+                    break;
+                case 'nonPrimitive':
+                    content = '<h2>Non-Primitive Datatypes</h2><p>Reference	String	Varies	A sequence of characters (not primitive)</p> <p>Array	Varies	A collection of similar types of values</p> <p>Class	Varies	User-defined types that encapsulate data and behavior</p> <p>Interface	Varies	Abstract types that define methods for classes to implement</p>';
+                    break;
+                case 'keywords':
+                    content = '<h2>TYPES OF KEYWORDS</h2><p>1. ACCESS MODIFIERS: Access modifiers determine the visibility of classes, methods, and variables. PUBLIC: The member is accessible from any other class. PROTECTED: The member is accessible within its own package and by subclasses. PRIVATE: The member is accessible only within its own class.</p> <p>2. NON-ACCESS MODIFIERS: Non-access modifiers provide additional functionality and characteristics to classes, methods, and variables. STATIC: Indicates that a member belongs to the class rather than instances of the class. Static members can be accessed without creating an instance of the class. FINAL: Indicates that a variable’s value cannot be changed (for variables), a method cannot be overridden (for methods), or a class cannot be subclassed (for classes). ABSTRACT: Indicates that a class cannot be instantiated or that a method must be implemented in a subclass. SYNCRONIZED: Used in multi-threading to ensure that a method or block of code can only be accessed by one thread at a time. VOLATILE: Indicates that a variable may be changed unexpectedly, used mainly in multi-threading to ensure visibility. TRANSIENT: Prevents serialization of certain fields in a class, so they won’t be saved when an object is serialized. NATIVE: Indicates that a method is implemented in platform-dependent code (e.g., C/C++) rather than in Java. STRICTFP: Used to restrict floating-point calculations to ensure portability across platforms.</p> <p>3. CONTROL FLOW STATEMENTDS: Control flow keywords dictate the execution flow of the program. if: Executes a block of code if a specified condition is true. else: Executes a block of code if the condition in the if statement is false. SWITCH: A multi-way branch statement that allows for variable comparison against multiple cases. CASE: Defines a branch in a switch statement. DEFAULT: Specifies the default block of code in a switch statement if no case matches. BREAK: Exits a loop or switch statement. CONTINUE: Skips the current iteration of a loop and proceeds to the next iteration. RETURN: Exits a method and optionally returns a value. DO: Executes a block of code once before checking a condition. WHILE: Executes a block of code repeatedly as long as a condition is true. FOR: A loop that executes a block of code a specific number of times, typically used for iterating over arrays or collections. TRY: Defines a block of code to be tested for exceptions during execution. catch: Defines a block of code to handle exceptions thrown by the try block. FINALLY: Defines a block of code that will always execute after a try block, regardless of whether an exception was thrown or caught. throw: Used to explicitly throw an exception. THROWS: Declares that a method can throw one or more exceptions, informing callers that they must handle those exceptions.</p><p>4. DATATYPES KEYWOREDS:Keywords that define primitive data types.INT: Represents a 32-bit signed integer. CHAR: Represents a single 16-bit Unicode character.FLOAT: Represents a single-precision 32-bit IEEE 754 floating point. DOUBLE: Represents a double-precision 64-bit IEEE 754 floating point. BOOLEAN: Represents a value that can be either true or false BYTE: Represents an 8-bit signed integer. SHORT: Represents a 16-bit signed integer. LONG: Represents a 64-bit signed integer. VOID: Indicates that a method does not return a value.</p><p>5. CLASS AND OBJECT RELATED KEYWORDS: Keywords related to class and object definitions. CLASS: Defines a new class.INTERFACE: Defines a new interface, which is a reference type that can contain only constants, method signatures, default methods, static methods, and nested types. EXTENDS: Indicates that a class is inheriting from a superclass. IMPLEMENTS: Indicates that a class is implementing an interface. NEW: Creates new objects or instances of classes. THIS: Refers to the current instance of a class. SUPER: Refers to the superclass of the current object and can be used to access superclass methods and constructors.INSTANCEOF: Tests whether an object is an instance of a specific class or interface.</p> <p>6. PACKAGE AND IMPORT KEYWORDS: Keywords for organizing and using classes.PACKAGE: Defines a namespace for a group of related classes. IMPORT: Allows the use of classes from other packages without specifying their fully qualified names.</p> <p>7. OTHER KEYWORDS: Miscellaneous keywords that serve specific purposes. ENUM: Defines a set of named constants, providing a type-safe way to define enumerations. ASSERT: Used for debugging purposes, to make an assertion about a program’s behavior. GOTO: Not used in Java, reserved for future use. CONST: Not used in Java, reserved for future use. NULL: A literal that represents a null reference, meaning it points to no object. These keywords are fundamental to the structure and behavior of Java programs, defining how data is managed, how control flows, and how classes and methods are structured.</p>';
+                    break;
+                case 'global':
+                    content = '<h2>GLOBAL VARIABLES</h2><p>A global variable is a variable that is accessible from any part of a program, across different methods, functions, or classes. However, Java does not support true global variables. Instead, Java uses static variables to achieve similar functionality. A static variable, when declared in a class, can be accessed globally (by all instances of the class and without creating instances), but it belongs to the class, not to individual objects.</p><p>Key Points:Java doesnt have true global variables.<p>Static Variables: A static variable is shared among all instances of a class and can be accessed directly through the class name. This makes it behave similarly to a global variable, as it maintains a single value across all instances.</p><p>Scope: Global variables can be accessed from any method within the class and, depending on the access modifier (e.g., public, private, protected), they can be accessed from other classes as well.</p><p>Initialization: Static variables are initialized when the class is loaded, making them available before any instances of the class are created.</p><p>Memory Management: Since static variables are stored in the method area of memory, they persist for the duration of the program, which is beneficial for maintaining state or configuration values.</p>';
+                    break;
+                case 'instance':
+                    content = '<h2>INSTANCE VARIABLES</h2><p>Instance Variable	Non-static field declared in a class (outside methods).	Belongs to an instance of the class, each</p><p>Declaration: Instance variables are typically declared at the class level. They can have different access modifiers (e.g., public, private, protected) to control their visibility.</p><p>Memory: Instance variables are stored in the heap memory, which is allocated when an object of the class is created. Each object has its own separate copy of the instance variables.</p><p>Default Values: If not explicitly initialized, instance variables have default values (e.g., 0 for integers, null for objects, false for booleans).</p><p>Scope: The scope of an instance variable is limited to the class in which it is defined, but it can be accessed by methods of that class and through object references.';
+                    break;
+                case 'static':
+                    content = '<h2>STATIC VARIABLES</h2><p>Static Variable	Declared with the static keyword in a class.	Belongs to the class, shared across all instances of the class.</p>Declaration: Static variables are declared with the static keyword and are usually initialized at the time of declaration or within a static block.</p><p>Memory: Static variables are stored in the method area of memory, which is allocated when the class is loaded. They persist for the entire lifetime of the program.</p><p>Access: Static variables can be accessed directly using the class name (e.g., ClassName.staticVariable) and can also be accessed through instance references, although this is not recommended for clarity.</p><p>Shared State: Since all instances share the same static variable, it is often used to maintain common state or configuration values that should be consistent across all instances.';
+                    break;
+                case 'local':
+                    content = '<h2>LOCAL VARIABLES</h2><p>Local Variable	Declared inside a method, constructor, or block.	Accessible only within the method or block where its defined..</p><p>Scope: The scope of a local variable is limited to the block in which it is defined. Other methods or blocks cannot access it.</p><p>Initialization: Local variables must be initialized before they can be used. Unlike instance and static variables, they do not have default values.</p><p>Memory: Local variables are stored on the stack, and their memory is allocated when the method is called and deallocated when the method exits</p><p>Lifetime: The lifetime of a local variable is restricted to the execution of the method in which it is declared.';
+                    break;
+                    case 'parameter':
+                    content = '<h2>PARAMETER VARIABLES</h2><p>Parameter Variable	Variables passed to methods or constructors.	Scope is limited to the method or constructor.</p>Declaration: Parameters are declared in the method or constructor definition. They specify the type and name of the variable that will receive the input value.<p>Scope: The scope of a parameter variable is limited to the method or constructor in which it is defined. It cannot be accessed outside of that method or constructor.</p><p>Initialization: Parameter variables are automatically initialized with the values passed when the method is called. They can be used directly within the method without additional initialization.</p><p>Multiple Parameters: A method can have multiple parameters, separated by commas, allowing it to accept multiple inputs.</p><p>Different Types: Parameters can be of any data type, including primitive types (like int, double, etc.) and reference types (like objects).';
+                    break;
+                    case 'final':
+                    content = '<h2>FINAL VARIABLES</h2><p>Final Variable	Declared with the final keyword.	Once initialized, the value cannot be changed (constant)..</p><p>Declaration: A variable is declared as final using the final keyword before its type (e.g., final int number = 10;).</p><p>Initialization: Final variables must be initialized when they are declared or within the constructor of the class. Once set, they cannot be reassigned.</p><p>Scope: Final variables can be instance variables (belonging to an instance of a class), static variables (belonging to the class itself), or local variables (defined within a method).</p><p>Constants: It is a common practice to declare final variables that represent constants in uppercase letters to distinguish them from regular variables (e.g., final double PI = 3.14159;).</p><p>Immutable Reference: If a final variable is a reference type (like an object), you cannot change the reference itself, but you can modify the objects internal state if the objects class allows it.';
+                    break;
+                case 'arithmetic':
+                    content = '<h2>ARITHMETIC OPERATOR</h2><p>Arithmetic Operators	+, -, *, /, %	Performs basic mathematical operations (addition, subtraction, multiplication, division, modulus).</p>';
+                    break;
+                case 'assignment':
+                    content = '<h2>ASSIGNMENT OPERATOR</h2><p>Assignment Operators	=, +=, -=, *=, /=, %=	Assigns values to variables (can combine with arithmetic).</p>';
+                    break;
+                case 'relational':
+                    content = '<h2>ReELATIONAL OPERATOR</h2><p>Relational Operators	==, !=, >, <, >=, <=	Compares two values and returns true or false.</p>';
+                    break;
+                case 'unary':
+                    content = '<h2>UNARY OPERATOR</h2><p>Unary Operators	+, -, ++, --, !	Performs operations with one operand (positive, negative, increment, decrement, logical NOT)</p>';
+                    break;
+                case 'bitwise':
+                    content = '<h2>BITWISE OPERATOR</h2><p>Bitwise Operators	&, 	, ^ ~, << , >>, >>> </p>';
+                    break;
+                case 'shift':
+                    content = '<h2>SHIFT OPERATOR</h2><p>Shift Operators	<<, >>, >>>	Shifts bits of a number left or right.</p>';
+                    break;
+                case 'logical':
+                    content = '<h2>LOGICAL OPERATORr</h2><p>Logical operators include &&, ||...AND checks if both are true.</p><p>OR checks if at least one is true.</p><p>NOT flips the true/false value.</p>';
+                    break;
+                case 'ternary':
+                    content = '<h2>TERNARY OPERATOR</h2><p>Ternary Operator	? :	A shorthand for if-else conditional expressions.condition: A boolean expression that evaluates to true or false.</p><p>expressionIfTrue: The value or expression returned if the condition is true.</p><p>expressionIfFalse: The value or expression returned if the condition is false.</p>';
+                    break;
+                case 'decision':
+                    content = '<h2>DECISION MAKING STATEMENTS</h2><p>Decision-Making Statements:IF STATEMENTS:Executes a block of code if a specified condition is true.</p> <p>if (condition) { // Code to execute if the condition is true}</p><p>ELSE IF:Adds another condition to check if the previous if condition is false. if (condition1) { // Code if condition1 is true} else if (condition2) { // Code if condition1 is false and condition2 is true}</p><p>ELSE STATEMENT:Executes a block of code if none of the previous conditions are true. if (condition) { // Code if condition is true } else { // Code if condition is false }<p>SWITCH STATEMENT:Selects one of many code blocks to execute based on a variables value. It is an alternative to a long if-else chain. switch (expression) {  case value1: // Code to execute if expression equals value1 break;  case value2:    // Code to execute if expression equals value2  break; default: // Code to execute if no case matches}</p>';
+                    break;
+                case 'loop':
+                    content = '<h2>LOOPING STATEMENTS</h2><p>Looping Statements:FOR LOOP:Repeats a block of code a specified number of times.</p><p>for (initialization; condition; increment/decrement) {}</p><p>WHILE LOOP: Repeats a block of code as long as a condition is true. while (condition) { while condition is true }</p><p>DO WHILE LOOP:Similar to the while loop but ensures that the code inside the loop is executed at least once, regardless of the condition.do {} while (condition)</p>';
+                    break;
+                case 'jump':
+                    content = '<h2>Switch</h2><p>JUMP STATEMENTS:break Statement:Exits from a loop or switch statement immediately, skipping any remaining code.</p><p>if (condition) {  break;  </p><p>CONTINUE:Skips the current iteration of a loop and moves to the next iteration. if (condition) { continue; }<p>RETURN STATEMENT:Exits from the current method and optionally returns a value.return value;  // Exits the method and returns a valuep</p>';
+                    break;
+                case 'method':
+                    content = '<h2>METHODS</h2><p>A method in Java is a block of code that performs a specific task and can be invoked or called upon to execute that task. It typically includes:</p> <p>METHOD SIGNATURE: Consists of the methods name and its parameter list.</p><p>RETURN TYPE: Specifies the data type of the value the method returns (or void if it returns nothing).</p><p>PARAMETERS: Optional input values the method can accept.</p><p>BODY: The block of code that defines the functionality of the method.</p><p>EXAMPLE:public int add(int a, int b) { return a + b;}In this case, add is a method that takes two integers as parameters and returns their sum.</p>';
+                    break;
+                case 'static':
+                    content = '<h2>STATIC METHODS</h2><p>A static method in Java is a method that belongs to the class rather than an instance of the class. It can be called without creating an object of the class and can only directly access other static methods and static variables.<p>Key characteristics:Called on the class itself using ClassName.methodName().Cannot access instance variables or instance methods directly.Often used for utility or helper methods.</p><p>EXAMPLE:public class Example {public static void display() {System.out.println("This is a static method.");}}Example.display(); </p>';
+                    break;
+                case 'nonstatic':
+                    content = '<h2>Non-Static Method</h2><p>A non-static method in Java, also known as an instance method, is associated with an instance of a class. To invoke a non-static method, an object of the class must be created.Key characteristics:Belongs to an instance of a class.Can access both instance variables and static variables.Can invoke both static and non-static methods.<p>Example:public class Example {public void display() {System.out.println("This is a non-static method.");}} obj = new Example();obj.display(); </p>';
+                    break;
+                case 'overloading':
+                    content = '<h2>Method Overloading</h2><p>Method overloading in Java is a feature that allows a class to have more than one method with the same name, as long as their parameter lists differ (either in number, type, or order of parameters).Key points:Same method name but different parameter types or number of parameters.Return type can be different, but it’s not sufficient to overload by return type alone.Improves code readability and reusability.</p>';
+                    break;
+                case 'overriding':
+                    content = '<h2>Method Overriding</h2><p>Method overriding in Java occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The method in the subclass must have the same name, return type, and parameters as the method in the superclass.Key points:Used for runtime polymorphism.The method in the subclass should have the same signature as in the superclass.The @Override annotation is optional but recommended to avoid mistakes.Access modifiers: The overridden method in the subclass cannot have a more restrictive access modifier than the superclass method.</p>';
+                    break;
+                case 'declaration':
+                    content = '<h2>Types of Declaration Arrays</h2><p>In Java, arrays can be declared in two primary ways:<p>1. WITH NEW KEYWORD:When using the new keyword, you specify the size of the array or initialize it with specific values. This allocates memory for the array.Example:Declaring an array by specifying size: int[] arr = new int[5];Declaring and initializing values: int[] arr = new int[]{1, 2, 3, 4};</p><p>2. WITHOUT NEW KEYWORD:You can declare and initialize the array without explicitly using the new keyword by directly providing the values.Example:Direct initialization: int[] arr = {1, 2, 3, 4};In both cases, the array is created and can be accessed using indices. The difference lies in whether you explicitly allocate memory using the new keyword or not.</p>';
+                    break;
+                case 'importance':
+                    content = '<h2>Importance of Arrays</h2><p>Arrays are important in Java and programming for several reasons:</p><p>Efficient Storage: Arrays allow efficient storage of multiple elements of the same data type in a single structure, reducing memory overhead compared to individual variables</p><p>Index-based Access: Arrays provide fast, direct access to elements using their index, which improves performance when accessing or modifying elements.</p><p>Fixed Size: Arrays have a fixed size, making them predictable in terms of memory usage and ensuring a defined structure.</p><p>Ease of Iteration: Arrays can be easily iterated over using loops, simplifying operations like searching, sorting, or processing large sets of data.</p><p> Multidimensional Arrays: They allow the representation of complex data structures, like matrices or tables, enabling storage and manipulation of more organized data.</p><p>Code Simplification: Arrays help simplify code by replacing multiple individual variables with a single array, making the code cleaner and easier to maintain.</p><p>Foundation for Data Structures: Arrays serve as the basis for more complex data structures like stacks, queues, heaps, and hash tables.</p>';
+                    break;
+                case 'rules':
+                    content = '<h2>Rules of Arrays</h2><p>Here are the key rules for working with arrays in Java:</p><p>Declaration: An array must be declared before it can be used. The declaration specifies the type of elements the array will hold.</p><p>Initialization: An array must be initialized before accessing its elements. This can be done using the new keyword or by directly assigning values.</p><p>Fixed Size: The size of an array is fixed at the time of creation and cannot be changed. This means you cannot add or remove elements after initialization.</p><p>Indexing: Array indices start at 0. The first element is accessed with index 0, and the last element is accessed with index length - 1. int firstElement = arr[0]; // Accessing the first element Type Consistency: All elements in an array must be of the same data type, whether primitive types or objects.</p> <p>Bounds Checking: Java performs bounds checking. Attempting to access an index that is out of bounds (negative index or greater than length - 1) will throw an ArrayIndexOutOfBoundsException.Multidimensional Arrays: For multidimensional arrays (like 2D arrays), each row can have a different number of columns, creating a jagged array. int[][] jaggedArray = new int[3][]; Default Values: When an array is created, its elements are automatically initialized to default values: <p>0 for numeric types false for boolean null for object references These rules govern how arrays are declared, initialized, accessed, and managed in Java.</p>';
+                    break;
+                case 'oneD':
+                    content = '<h2>One-D Array</h2><p>One-Dimensional Array:A one-dimensional array is a linear data structure that stores a sequence of elements of the same type in a single row. It can be thought of as a list of items, where each element can be accessed using its index, starting from 0.<p>Example:int[] oneDArray = {1, 2, 3, 4, 5};</p>';
+                    break;
+                case 'twoD':
+                    content = '<h2>Two-D Array</h2><p>A two-dimensional array is a collection of elements arranged in a grid or matrix format, consisting of rows and columns. It is essentially an array of arrays, where each element can be accessed using two indices: one for the row and one for the column.<p>Example:int[][] twoDArray = {{1, 2, 3},{4, 5, 6},{7, 8, 9}};In this example, twoDArray is a 3x3 matrix, and you can access the element in the second row and third column using twoDArray[1][2], which gives 6.</p>';
+                    break;
+                case 'string':
+                    content = '<h2>What is String</h2><p>A String in Java is a sequence of characters used to represent text. Strings are objects in Java and are part of the java.lang package. They are immutable, meaning that once a String object is created, its content cannot be changed.<p>Key Characteristics of Strings:</p><p>Immutable: Any modification to a String results in the creation of a new String object rather than changing the original.</p><p>Declaration: Strings can be declared using double quotes (")</p>';
+                    break;
+                case 'importancestr':
+                    content = '<h2>Importance of Strings</h2>Strings are important in Java and programming in general for several reasons:<p>Text Representation: Strings provide a way to represent and manipulate text, which is essential for user interfaces, file processing, and communication.</p><p>Data Processing: Many applications require string manipulation for data processing tasks, such as parsing, formatting, and validating input.</p><p>User Interaction: Strings are commonly used for user input and output, making them critical for developing interactive applications.</p><p>Database Communication: Strings are used to construct SQL queries and handle data retrieved from databases, facilitating data manipulation and retrieval.</p><p>Networking: In network programming, strings are used for protocols, messages, and data transmission, enabling communication between systems.</p><p>ERROR HANDLING: Strings can be used to store error messages, logs, and debugging information, aiding in troubleshooting and maintenance.</P><p>STRING MANIPULATION METHODS: Javas String class provides a rich set of methods for string manipulation, such as searching, replacing, splitting, and formatting, which simplifies development.</P><p>IMMUTABLITY: The immutability of strings ensures that once created, they cannot be changed, which helps maintain data integrity and thread safety in concurrent applications.Concatenation and Formatting: Strings allow easy concatenation and formatting of text, making it simple to create dynamic messages or reports.Overall, strings are fundamental to programming and are used in virtually every application, making them a vital part of the Java language and software development in general.</p>';
+                    break;
+                case 'immutable':
+                    content = '<h2>IMMUTABLE</h2><p>Strings in Java are immutable for several important reasons:<p>SECURITY: Immutability helps protect sensitive data. For example, when dealing with passwords or personal information, keeping the string immutable ensures that its value cannot be altered accidentally or maliciously.</p><p>THREAD SAFETY: Immutable objects are inherently thread-safe. Multiple threads can access the same String instance without risk of modification, which simplifies concurrent programming and reduces the need for synchronization.</p><p>PERFORMANCE OPTIMIZATION: Java optimizes memory usage and performance with immutable strings. The Java Virtual Machine (JVM) can share the same instance of a String that has the same value, reducing memory consumption through a process called "string interning." When a String is created, if another String with the same content already exists in the memory pool, the JVM can refer to the existing instance instead of creating a new one.</p><p>EASY TO USE: Working with immutable objects simplifies code. Developers don’t need to worry about unexpected changes to string values, making the code easier to understand and maintain.</p><p>HASH CODE CACHING: Since the content of a String does not change, its hash code can be cached when the String is created. This improves the performance of operations that rely on hash codes, such as storing strings in hash tables or using them as keys in a map.</p> Overall, the immutability of strings enhances security, simplifies concurrency, and improves performance, making them a fundamental aspect of Java programming.</p>';
+                    break;
+                case 'methods':
+                    content = '<h2>Methods of Strings</h2><p>length(): Returns the length of the string.<p>charAt(int index): Returns the character at the specified index.</p><p>substring(int beginIndex): Returns a substring from the specified starting index to the end of the string.</p><p>substring(int beginIndex, int endIndex): Returns a substring between the specified start and end indices</p><p>toLowerCase(): Converts the string to lowercase.</p><p>toUpperCase(): Converts the string to uppercase.</p><p>trim(): Removes leading and trailing whitespace.</p><p>equals(Object obj): Compares the string to another object for equality.</p><p>equalsIgnoreCase(String anotherString): Compares the string to another string, ignoring case considerations.</p><p>indexOf(String str): Returns the index of the first occurrence of the specified substring, or -1 if not found.</p><p>lastIndexOf(String str): Returns the index of the last occurrence of the specified substring.</p><p>replace(char oldChar, char newChar): Replaces all occurrences of a specified character with a new character.</p><p>split(String regex): Splits the string into an array of substrings based on the specified regular expression.</p><p>contains(CharSequence sequence): Checks if the string contains the specified sequence of characters.</p><p>startsWith(String prefix): Checks if the string starts with the specified prefix.</p><p>endsWith(String suffix): Checks if the string ends with the specified suffix.</p>';
+                    break;
+                case 'substring':
+                    content = '<h2>Substring</h2><p>A substring in Java is a portion of a string that can be extracted from a larger string. It is defined by specifying a starting index and, optionally, an ending index. The substring includes characters starting from the specified beginning index up to (but not including) the specified ending index.<p>Key Points about Substrings:</p><p>Immutable: Like all strings in Java, substrings are immutable; once created, their content cannot be changed.</p><p>Indexing: The indexing for strings starts at 0. Therefore, the first character is at index 0.</p><p>Creating Substrings: You can create substrings using the substring() method of the String class.</p><p>Example Usage:</p><p>substring(int beginIndex): Returns the substring from the specified starting index to the end of the string.</p><p>substring(int beginIndex, int endIndex): Returns the substring between the specified start and end indices.</p><p>Substrings are useful for extracting specific parts of a string for processing, searching, or manipulating text data.</p>';
+                  break;
+                case 'exception':
+                    content = '<h2>What is Exception</h2><p>An exception in Java is an event that occurs during the execution of a program that disrupts the normal flow of instructions. Exceptions are objects that represent an error or an unexpected condition, allowing developers to handle errors gracefully.</p>Exceptions are important for handling errors and maintaining the normal flow of a program. By using try-catch blocks, you can anticipate potential issues and manage them gracefully, enhancing the robustness and reliability of your applications. Understanding exceptions is crucial for effective error handling in Java programming.';
+                    break;
+                case 'types':
+                    content = '<h2>Types of Exceptions</h2><p>Types of Exceptions:<p>Checked Exceptions: Exceptions that are checked at compile time. These must be either caught or declared in the method signature using throws. Examples include IOException and SQLException.</p><p>Unchecked Exceptions: Exceptions that occur at runtime and are not checked at compile time. These do not need to be declared or caught. Examples include NullPointerException, ArrayIndexOutOfBoundsException, and ArithmeticException.</p><p>Error: A subclass of Throwable that indicates serious problems that a reasonable application should not catch. Examples include OutOfMemoryError and StackOverflowError.</p>';
+                    break;
+                case 'handling':
+                    content = '<h2>Exception Handling</h2><p>Try-Catch Block: Use a try block to enclose code that may throw exceptions and one or more catch blocks to handle specific exceptions.<p>Finally Block: Include a finally block to execute code that should run regardless of whether an exception occurred, typically for resource cleanup.</p><p>Throwing Exceptions: Use the throw keyword to explicitly throw an exception when a specific condition arises.</p><p>Custom Exceptions: Create custom exception classes by extending the Exception class or its subclasses to represent specific error conditions in your application.</p><p>Method Declaration with Throws: Use the throws keyword in method signatures to indicate that a method may throw certain exceptions, requiring callers to handle them.</p>These methods enable effective management and response to exceptions in Java applications.</p>';
+                    break;
+                default:
+                    content = '<h2>Select a topic to see content</h2>';
+            }
+
+            contentArea.innerHTML = content;
+        }
+
+        // Function for going back to the course
+        function bwd() {
+            // Logic for going back to course, for example:
+            window.location.href = './summer.html';
+        }
+    </script>
+</body>
+</html>

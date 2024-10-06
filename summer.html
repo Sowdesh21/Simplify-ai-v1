@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Summarization and Speech</title>
+    <link rel="stylesheet" href="./summer.css">
+</head>
+<body>
+    <div class="container">
+        <textarea id="inputText" rows="5" cols="50" placeholder="Enter text to summarize..."></textarea>
+        <button id="paraphraseButton">Get Summary</button>
+        
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        
+        <div style="color: white;" id="result"></div>
+        <select id="voiceSelect"></select>
+        <button id="speakButton">Speak Summary</button>
+        <button id="pauseBtn">Pause</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
